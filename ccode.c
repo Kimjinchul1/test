@@ -241,4 +241,48 @@ int main() {
     printf("입력: [%.2f, %.2f, %.2f]\n", input[0], input[1], input[2]);
     printf("출력: [%.2f, %.2f]\n\n", final_output[0], final_output[1]);
 
-    // 그래프 생성 (BFS와 DFS
+     // 탐색 알고리즘을 위한 그래프 생성
+    struct Node* node1 = create_node(1);
+    struct Node* node2 = create_node(2);
+    struct Node* node3 = create_node(3);
+    struct Node* node4 = create_node(4);
+    struct Node* node5 = create_node(5);
+
+    add_edge(node1, node2);
+    add_edge(node1, node3);
+    add_edge(node2, node4);
+    add_edge(node3, node4);
+    add_edge(node3, node5);
+
+    // BFS 수행
+    printf("BFS 탐색 결과: ");
+    bfs(node1);
+    printf("\n");
+
+    // 방문 플래그 초기화
+    node1->visited = node2->visited = node3->visited = node4->visited = node5->visited = false;
+
+    // DFS 수행
+    printf("DFS 탐색 결과: ");
+    dfs(node1);
+    printf("\n");
+
+    // 할당된 메모리 해제
+    free_layer(hidden_layer);
+    free_layer(output_layer);
+    free(hidden_output);
+    free(final_output);
+
+    free(node1->neighbors);
+    free(node2->neighbors);
+    free(node3->neighbors);
+    free(node4->neighbors);
+    free(node5->neighbors);
+    free(node1);
+    free(node2);
+    free(node3);
+    free(node4);
+    free(node5);
+
+    return 0;
+}
