@@ -1,0 +1,75 @@
+OpenCode 네트워크 테스트 결과 - Wed Dec 17 07:51:06 UTC 2025
+=========================================
+
+
+=========================================
+1. DNS 해석 테스트
+=========================================
+✗ DNS 해석
+  → 실패 - DNS 차단됨
+
+=========================================
+2. 기본 네트워크 연결 테스트
+=========================================
+✗ Ping
+  → 실패 - ICMP 차단 가능 (정상일 수 있음)
+
+=========================================
+3. HTTP/HTTPS 연결 테스트
+=========================================
+✓ HTTP (포트 80)
+  → 연결 가능
+✓ HTTPS (포트 443)
+  → 연결 가능
+  응답 헤더:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 200 OK
+date: Wed, 17 Dec 2025 07:51:06 GMT
+
+=========================================
+4. npm 레지스트리 접근 테스트
+=========================================
+✗ npm 레지스트리 루트
+  → 접근 불가
+  응답: {}
+
+=========================================
+5. OpenCode 필수 패키지 접근 테스트
+=========================================
+✓ opencode-ai
+  → 버전: 0.0.0
+✓ @opencode-ai/plugin
+  → 버전: 0.0.0-202508022053
+✓ opencode-copilot-auth
+  → 버전: 0.0.1
+✓ opencode-anthropic-auth
+  → 버전: 0.0.1
+
+=========================================
+6. 실제 패키지 다운로드 테스트 (npm)
+=========================================
+
+=========================================
+7. 프록시 설정 확인
+=========================================
+✓ HTTP_PROXY
+  → http://container_container_01ACBgcGhYYkMLeYd36K7ChW--claude_code_remote--that-firm-steel-pedal:jwt_eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6Iks3dlRfYUVsdXIySGdsYVJ0QWJ0UThDWDU4dFFqODZIRjJlX1VsSzZkNEEifQ.eyJpc3MiOiJhbnRocm9waWMtZWdyZXNzLWNvbnRyb2wiLCJvcmdhbml6YXRpb25fdXVpZCI6IjA4NWI1ZWZlLTE5YmUtNDg5NC1iM2VlLThiNTE0ODM5NzQyMSIsImlhdCI6MTc2NTk1NzY5NiwiZXhwIjoxNzY1OTcyMDk2LCJhbGxvd2VkX2hvc3RzIjoicGtncy5rOHMuaW8sKi5nb29nbGVhcGlzLmNvbSxjZG4uY29jb2Fwb2RzLm9yZyxweXBpLnB5dGhvbi5vcmcsaGFja2FnZS5oYXNrZWxsLm9yZyx3d3cuanNvbi1zY2hlbWEub3JnLHNlY3VyaXR5LnVidW50dS5jb20sbGF1bmNocGFkLm5ldCxhcGkuYW50aHJvcGljLmNvbSx3d3cuZ29sYW5nLm9yZyxyYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tLGFwaS5ydWJ5Z2Vtcy5vcmcsY2xhdWRlLmFpLGFwaS5wdWIuZGV2LGh0dHAtaW50YWtlLmxvZ3MuZGF0YWRvZ2hxLmNvbSxkbC5rOHMuaW8sd3d3LmFwYWNoZS5vcmcsZ29wcm94eS5pbyxhcmNoaXZlLnVidW50dS5jb20sZG93bmxvYWRzLmFwYWNoZS5vcmcsd3d3LnB5cGkub3JnLHN0YXRzaWcuYW50aHJvcGljLmNvbSxoYXNoaWNvcnAuY29tLHBvcnRhbC5henVyZS5jb20scmVwby5zcHJpbmcuaW8sZG9jcy5jbGF1ZGUuY29tLHd3dy5udWdldC5vcmcsaW5kZXguZG9ja2VyLmlvLGRvdG5ldC5taWNyb3NvZnQuY29tLHJlZ2lzdHJ5Lnlhcm5wa2cuY29tLGNhbW8uZ2l0aHVidXNlcmNvbnRlbnQuY29tLHNwcmluZy5pbyxhcmNoaXZlLnJlbGVhc2VzLmhhc2hpY29ycC5jb20scHViLmRldixkb3dubG9hZC5kb2NrZXIuY29tLHd3dy5zY2hlbWFzdG9yZS5vcmcsd3d3LnN0YXRzaWcuY29tLHd3dy5ydWJ5b25yYWlscy5vcmcsd3d3LnN3aWZ0Lm9yZyxhcmNoaXZlLmFwYWNoZS5vcmcsd3d3LnJ1c3QtbGFuZy5vcmcsd3d3LmRvY2tlci5jb20sZG90Lm5ldCxweXBhLmlvLHN0YXRpYy5ydXN0LWxhbmcub3JnLHN1bS5nb2xhbmcub3JnLHJlbGVhc2VzLmhhc2hpY29ycC5jb20sd3d3LmNyYXRlcy5pbyxhdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbSwqLnNlbnRyeS5pbyxnaXN0LmdpdGh1Yi5jb20scGFja2FnZWNsb3VkLmlvLHd3dy5ydWJ5Zm9yZ2Uub3JnLCoubWljcm9zb2Z0b25saW5lLmNvbSwqLjQ4MzcwMzkzMjQ3NC51cy1lYXN0NS5ydW4uYXBwLGNvbnRpbnV1bS5pbyxucG1qcy5vcmcsKi5kYXRhLm1jci5taWNyb3NvZnQuY29tLHJ1c3R1cC5ycyx3d3cuamF2YS5jb20scnZtLmlvLHd3dy5tZXRhY3Bhbi5vcmcscGtnLmdvLmRldixtaWNyb3NvZnQuY29tLGNvbnRhaW5lci5nb29nbGVhcGlzLmNvbSx3d3cuZWNsaXBzZS5vcmcsb2JqZWN0cy5naXRodWJ1c2VyY29udGVudC5jb20sd3d3LnVidW50dS5jb20scmVnaXN0cnkuZ2l0bGFiLmNvbSx3d3cuZ2l0bGFiLmNvbSxhcGFjaGUub3JnLHN0YXRpYy5jcmF0ZXMuaW8scnBtLnJlbGVhc2VzLmhhc2hpY29ycC5jb20scnVieWdlbXMub3JnLHd3dy5qYXZhLm5ldCxudWdldC5vcmcsc3RhdHNpZy5jb20scmVwbzEubWF2ZW4ub3JnLGFydGlmYWN0b3J5LmluZnJhLmFudC5kZXYsb3JhY2xlLmNvbSxnaXRodWIuY29tLCoudWJ1bnR1LmNvbSx3d3cucnVieS1sYW5nLm9yZyxpbmRleC5jcmF0ZXMuaW8sYXBpLmJpdGJ1Y2tldC5vcmcsd3d3LmNvY29hcG9kcy5vcmcsanNvbi5zY2hlbWFzdG9yZS5vcmcsaW5kZXguZ29sYW5nLm9yZyxhbmFjb25kYS5jb20saW5kZXgucnVieWdlbXMub3JnLG5wbWpzLmNvbSxydWJ5LWxhbmcub3JnLGNvZGVsb2FkLmdpdGh1Yi5jb20sd3d3LmhleC5wbSxnaGNyLmlvLHd3dy5naXRodWIuY29tLGNvY29hcG9kcy5vcmcsNDgzNzAzOTMyNDc0LnVzLWVhc3Q1LnJ1bi5hcHAsbWV0YWNwYW4ub3JnLHZpc3VhbHN0dWRpby5jb20scmVwby5tYXZlbi5vcmcsZ3JhZGxlLm9yZyxrOHMuaW8sYXBpLnN0YXRzaWcuY29tLHJlZ2lzdHJ5Lm5wbWpzLm9yZyxjZW50cmFsLm1hdmVuLm9yZyxyZXBvLnBhY2thZ2lzdC5vcmcscnVieWZvcmdlLm9yZyx3d3cucHlwYS5pbyxwYWNrYWdlcy5taWNyb3NvZnQuY29tLHNlcnZpY2VzLmdyYWRsZS5vcmcsY3Bhbi5vcmcsaGFza2VsbC5vcmcsd3d3LnBhY2thZ2lzdC5vcmcscHJveHkuZ29sYW5nLm9yZyxweXBpLm9yZyx1YnVudHUuY29tLGF6dXJlLmNvbSxhcGkubnVnZXQub3JnLHd3dy5oYXNrZWxsLm9yZyxlY2xpcHNlLm9yZyxzdG9yYWdlLmdvb2dsZWFwaXMuY29tLHNvdXJjZWZvcmdlLm5ldCx3d3cubnBtanMuY29tLHd3dy5ucG1qcy5vcmcsKi5nY3IuaW8scGFja2FnaXN0Lm9yZyx3d3cuaGFzaGljb3JwLmNvbSxweXRob25ob3N0ZWQub3JnLGh1Yi5kb2NrZXIuY29tLHd3dy5taWNyb3NvZnQuY29tLHJ1YnlvbnJhaWxzLm9yZyx0ZXN0LnB5cGkub3JnLG5vZGVqcy5vcmcsd3d3LmxhdW5jaHBhZC5uZXQsamF2YS5jb20sKi5wYWNrYWdlY2xvdWQuaW8sd3d3Lms4cy5pbyx5YXJucGtnLmNvbSx3d3cubm9kZWpzLm9yZyxzZW50cnkuaW8sYW5hY29uZGEub3JnLGNsb3VkLmdvb2dsZS5jb20sZG93bmxvYWQuZWNsaXBzZS5vcmcsanNvbi1zY2hlbWEub3JnLGF1dGguZG9ja2VyLmlvLHJlZ2lzdHJ5LTEuZG9ja2VyLmlvLGRldi5henVyZS5jb20sY3JhdGVzLmlvLGFwdC5yZWxlYXNlcy5oYXNoaWNvcnAuY29tLGphdmEubmV0LGFwaS5tZXRhY3Bhbi5vcmcsd3d3LmFuYWNvbmRhLmNvbSx3d3cuY3Bhbi5vcmcscHBhLmxhdW5jaHBhZC5uZXQscmVwby5hbmFjb25kYS5jb20sd3d3LmdyYWRsZS5vcmcsZmlsZXMucHl0aG9uaG9zdGVkLm9yZyxjb25kYS5hbmFjb25kYS5vcmcsKi5kYXRhZG9naHEuY29tLGNvbXB1dGUuZ29vZ2xlYXBpcy5jb20sd3d3LmJpdGJ1Y2tldC5vcmcsbWF2ZW4ub3JnLGdldC5ydm0uaW8sYXBpLXN0YWdpbmcuYW50aHJvcGljLmNvbSxhY2NvdW50cy5nb29nbGUuY29tLGdjci5pbyx3d3cucnVieWdlbXMub3JnLGpjZW50ZXIuYmludHJheS5jb20saGV4LnBtLGdvbGFuZy5vcmcscHJvZHVjdGlvbi5jbG91ZGZsYXJlLmRvY2tlci5jb20sZ2Nsb3VkLmdvb2dsZS5jb20sZG93bmxvYWQub3JhY2xlLmNvbSwqLnNvdXJjZWZvcmdlLm5ldCxnaXRsYWIuY29tLHl1bS5vcmFjbGUuY29tLHN3aWZ0Lm9yZyxhcGkuZ2l0aHViLmNvbSx3d3cub3JhY2xlLmNvbSxiaXRidWNrZXQub3JnLG1jci5taWNyb3NvZnQuY29tIiwiaXNfaGlwYWFfcmVndWxhdGVkIjoiZmFsc2UiLCJ1c2VfZWdyZXNzX2dhdGV3YXkiOiJmYWxzZSIsInNlc3Npb25faWQiOiJzZXNzaW9uXzAxNnk5eEpTakFKY2hEMjlzcXNEWk1tVSIsImNvbnRhaW5lcl9pZCI6ImNvbnRhaW5lcl8wMUFDQmdjR2hZWWtNTGVZZDM2SzdDaFctLWNsYXVkZV9jb2RlX3JlbW90ZS0tdGhhdC1maXJtLXN0ZWVsLXBlZGFsIn0._fosaDiqvINYZD9eJnUchGxQ0zFtaUhAeK7Qd_4_beH8GVYPi5Vtk7pTSTFsJTdV5aiOZOw4Gryx4MZTOakZgQ@21.0.0.127:15004
+✓ HTTPS_PROXY
+  → http://container_container_01ACBgcGhYYkMLeYd36K7ChW--claude_code_remote--that-firm-steel-pedal:jwt_eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6Iks3dlRfYUVsdXIySGdsYVJ0QWJ0UThDWDU4dFFqODZIRjJlX1VsSzZkNEEifQ.eyJpc3MiOiJhbnRocm9waWMtZWdyZXNzLWNvbnRyb2wiLCJvcmdhbml6YXRpb25fdXVpZCI6IjA4NWI1ZWZlLTE5YmUtNDg5NC1iM2VlLThiNTE0ODM5NzQyMSIsImlhdCI6MTc2NTk1NzY5NiwiZXhwIjoxNzY1OTcyMDk2LCJhbGxvd2VkX2hvc3RzIjoicGtncy5rOHMuaW8sKi5nb29nbGVhcGlzLmNvbSxjZG4uY29jb2Fwb2RzLm9yZyxweXBpLnB5dGhvbi5vcmcsaGFja2FnZS5oYXNrZWxsLm9yZyx3d3cuanNvbi1zY2hlbWEub3JnLHNlY3VyaXR5LnVidW50dS5jb20sbGF1bmNocGFkLm5ldCxhcGkuYW50aHJvcGljLmNvbSx3d3cuZ29sYW5nLm9yZyxyYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tLGFwaS5ydWJ5Z2Vtcy5vcmcsY2xhdWRlLmFpLGFwaS5wdWIuZGV2LGh0dHAtaW50YWtlLmxvZ3MuZGF0YWRvZ2hxLmNvbSxkbC5rOHMuaW8sd3d3LmFwYWNoZS5vcmcsZ29wcm94eS5pbyxhcmNoaXZlLnVidW50dS5jb20sZG93bmxvYWRzLmFwYWNoZS5vcmcsd3d3LnB5cGkub3JnLHN0YXRzaWcuYW50aHJvcGljLmNvbSxoYXNoaWNvcnAuY29tLHBvcnRhbC5henVyZS5jb20scmVwby5zcHJpbmcuaW8sZG9jcy5jbGF1ZGUuY29tLHd3dy5udWdldC5vcmcsaW5kZXguZG9ja2VyLmlvLGRvdG5ldC5taWNyb3NvZnQuY29tLHJlZ2lzdHJ5Lnlhcm5wa2cuY29tLGNhbW8uZ2l0aHVidXNlcmNvbnRlbnQuY29tLHNwcmluZy5pbyxhcmNoaXZlLnJlbGVhc2VzLmhhc2hpY29ycC5jb20scHViLmRldixkb3dubG9hZC5kb2NrZXIuY29tLHd3dy5zY2hlbWFzdG9yZS5vcmcsd3d3LnN0YXRzaWcuY29tLHd3dy5ydWJ5b25yYWlscy5vcmcsd3d3LnN3aWZ0Lm9yZyxhcmNoaXZlLmFwYWNoZS5vcmcsd3d3LnJ1c3QtbGFuZy5vcmcsd3d3LmRvY2tlci5jb20sZG90Lm5ldCxweXBhLmlvLHN0YXRpYy5ydXN0LWxhbmcub3JnLHN1bS5nb2xhbmcub3JnLHJlbGVhc2VzLmhhc2hpY29ycC5jb20sd3d3LmNyYXRlcy5pbyxhdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbSwqLnNlbnRyeS5pbyxnaXN0LmdpdGh1Yi5jb20scGFja2FnZWNsb3VkLmlvLHd3dy5ydWJ5Zm9yZ2Uub3JnLCoubWljcm9zb2Z0b25saW5lLmNvbSwqLjQ4MzcwMzkzMjQ3NC51cy1lYXN0NS5ydW4uYXBwLGNvbnRpbnV1bS5pbyxucG1qcy5vcmcsKi5kYXRhLm1jci5taWNyb3NvZnQuY29tLHJ1c3R1cC5ycyx3d3cuamF2YS5jb20scnZtLmlvLHd3dy5tZXRhY3Bhbi5vcmcscGtnLmdvLmRldixtaWNyb3NvZnQuY29tLGNvbnRhaW5lci5nb29nbGVhcGlzLmNvbSx3d3cuZWNsaXBzZS5vcmcsb2JqZWN0cy5naXRodWJ1c2VyY29udGVudC5jb20sd3d3LnVidW50dS5jb20scmVnaXN0cnkuZ2l0bGFiLmNvbSx3d3cuZ2l0bGFiLmNvbSxhcGFjaGUub3JnLHN0YXRpYy5jcmF0ZXMuaW8scnBtLnJlbGVhc2VzLmhhc2hpY29ycC5jb20scnVieWdlbXMub3JnLHd3dy5qYXZhLm5ldCxudWdldC5vcmcsc3RhdHNpZy5jb20scmVwbzEubWF2ZW4ub3JnLGFydGlmYWN0b3J5LmluZnJhLmFudC5kZXYsb3JhY2xlLmNvbSxnaXRodWIuY29tLCoudWJ1bnR1LmNvbSx3d3cucnVieS1sYW5nLm9yZyxpbmRleC5jcmF0ZXMuaW8sYXBpLmJpdGJ1Y2tldC5vcmcsd3d3LmNvY29hcG9kcy5vcmcsanNvbi5zY2hlbWFzdG9yZS5vcmcsaW5kZXguZ29sYW5nLm9yZyxhbmFjb25kYS5jb20saW5kZXgucnVieWdlbXMub3JnLG5wbWpzLmNvbSxydWJ5LWxhbmcub3JnLGNvZGVsb2FkLmdpdGh1Yi5jb20sd3d3LmhleC5wbSxnaGNyLmlvLHd3dy5naXRodWIuY29tLGNvY29hcG9kcy5vcmcsNDgzNzAzOTMyNDc0LnVzLWVhc3Q1LnJ1bi5hcHAsbWV0YWNwYW4ub3JnLHZpc3VhbHN0dWRpby5jb20scmVwby5tYXZlbi5vcmcsZ3JhZGxlLm9yZyxrOHMuaW8sYXBpLnN0YXRzaWcuY29tLHJlZ2lzdHJ5Lm5wbWpzLm9yZyxjZW50cmFsLm1hdmVuLm9yZyxyZXBvLnBhY2thZ2lzdC5vcmcscnVieWZvcmdlLm9yZyx3d3cucHlwYS5pbyxwYWNrYWdlcy5taWNyb3NvZnQuY29tLHNlcnZpY2VzLmdyYWRsZS5vcmcsY3Bhbi5vcmcsaGFza2VsbC5vcmcsd3d3LnBhY2thZ2lzdC5vcmcscHJveHkuZ29sYW5nLm9yZyxweXBpLm9yZyx1YnVudHUuY29tLGF6dXJlLmNvbSxhcGkubnVnZXQub3JnLHd3dy5oYXNrZWxsLm9yZyxlY2xpcHNlLm9yZyxzdG9yYWdlLmdvb2dsZWFwaXMuY29tLHNvdXJjZWZvcmdlLm5ldCx3d3cubnBtanMuY29tLHd3dy5ucG1qcy5vcmcsKi5nY3IuaW8scGFja2FnaXN0Lm9yZyx3d3cuaGFzaGljb3JwLmNvbSxweXRob25ob3N0ZWQub3JnLGh1Yi5kb2NrZXIuY29tLHd3dy5taWNyb3NvZnQuY29tLHJ1YnlvbnJhaWxzLm9yZyx0ZXN0LnB5cGkub3JnLG5vZGVqcy5vcmcsd3d3LmxhdW5jaHBhZC5uZXQsamF2YS5jb20sKi5wYWNrYWdlY2xvdWQuaW8sd3d3Lms4cy5pbyx5YXJucGtnLmNvbSx3d3cubm9kZWpzLm9yZyxzZW50cnkuaW8sYW5hY29uZGEub3JnLGNsb3VkLmdvb2dsZS5jb20sZG93bmxvYWQuZWNsaXBzZS5vcmcsanNvbi1zY2hlbWEub3JnLGF1dGguZG9ja2VyLmlvLHJlZ2lzdHJ5LTEuZG9ja2VyLmlvLGRldi5henVyZS5jb20sY3JhdGVzLmlvLGFwdC5yZWxlYXNlcy5oYXNoaWNvcnAuY29tLGphdmEubmV0LGFwaS5tZXRhY3Bhbi5vcmcsd3d3LmFuYWNvbmRhLmNvbSx3d3cuY3Bhbi5vcmcscHBhLmxhdW5jaHBhZC5uZXQscmVwby5hbmFjb25kYS5jb20sd3d3LmdyYWRsZS5vcmcsZmlsZXMucHl0aG9uaG9zdGVkLm9yZyxjb25kYS5hbmFjb25kYS5vcmcsKi5kYXRhZG9naHEuY29tLGNvbXB1dGUuZ29vZ2xlYXBpcy5jb20sd3d3LmJpdGJ1Y2tldC5vcmcsbWF2ZW4ub3JnLGdldC5ydm0uaW8sYXBpLXN0YWdpbmcuYW50aHJvcGljLmNvbSxhY2NvdW50cy5nb29nbGUuY29tLGdjci5pbyx3d3cucnVieWdlbXMub3JnLGpjZW50ZXIuYmludHJheS5jb20saGV4LnBtLGdvbGFuZy5vcmcscHJvZHVjdGlvbi5jbG91ZGZsYXJlLmRvY2tlci5jb20sZ2Nsb3VkLmdvb2dsZS5jb20sZG93bmxvYWQub3JhY2xlLmNvbSwqLnNvdXJjZWZvcmdlLm5ldCxnaXRsYWIuY29tLHl1bS5vcmFjbGUuY29tLHN3aWZ0Lm9yZyxhcGkuZ2l0aHViLmNvbSx3d3cub3JhY2xlLmNvbSxiaXRidWNrZXQub3JnLG1jci5taWNyb3NvZnQuY29tIiwiaXNfaGlwYWFfcmVndWxhdGVkIjoiZmFsc2UiLCJ1c2VfZWdyZXNzX2dhdGV3YXkiOiJmYWxzZSIsInNlc3Npb25faWQiOiJzZXNzaW9uXzAxNnk5eEpTakFKY2hEMjlzcXNEWk1tVSIsImNvbnRhaW5lcl9pZCI6ImNvbnRhaW5lcl8wMUFDQmdjR2hZWWtNTGVZZDM2SzdDaFctLWNsYXVkZV9jb2RlX3JlbW90ZS0tdGhhdC1maXJtLXN0ZWVsLXBlZGFsIn0._fosaDiqvINYZD9eJnUchGxQ0zFtaUhAeK7Qd_4_beH8GVYPi5Vtk7pTSTFsJTdV5aiOZOw4Gryx4MZTOakZgQ@21.0.0.127:15004
+  NO_PROXY: localhost,127.0.0.1,169.254.169.254,metadata.google.internal,*.svc.cluster.local,*.local,*.googleapis.com,*.google.com
+
+=========================================
+8. 추가 네트워크 정보
+=========================================
+
+=========================================
+최종 결과 요약
+=========================================
+
+✗ DNS 해석 불가
+✓ HTTPS 연결 가능
+✗ npm 레지스트리 접근 불가
+✓ npm 패키지 설치 가능
+점수: 2 / 4
