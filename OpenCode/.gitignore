@@ -1,0 +1,13 @@
+# OpenCode 바이너리 제외 (525MB)
+opencode-ai-offline/
+
+# npm 캐시 및 로그
+node_modules/
+*.log
+.npm/
+
+# OpenCode 설정/캐시
+.opencode/
+.config/opencode/
+.cache/opencode/
+.local/share/opencode/

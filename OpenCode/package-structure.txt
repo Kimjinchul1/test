@@ -1,0 +1,29 @@
+OpenCode 오프라인 패키지 구조
+================================
+
+전체 크기: 525MB
+
+디렉토리 구조:
+opencode-ai-offline/
+├── bin/
+│   └── opencode -> ../node_modules/opencode-linux-x64/bin/opencode (심볼릭 링크)
+├── node_modules/
+│   ├── opencode-linux-x64/           (135MB) - 주요 바이너리
+│   ├── opencode-linux-x64-baseline/  (135MB)
+│   ├── opencode-linux-x64-musl/      (128MB)
+│   └── opencode-linux-x64-baseline-musl/ (128MB)
+├── package.json                      (설정 파일)
+└── postinstall.mjs                   (설치 후 스크립트)
+
+실행 파일:
+- opencode-linux-x64/bin/opencode     (135MB ELF 바이너리)
+
+필요한 런타임 패키지 (온라인 설치 필요):
+- @opencode-ai/plugin@1.0.164
+- opencode-copilot-auth@0.0.9
+
+네트워크 의존성:
+- npm 레지스트리: https://registry.npmjs.org
+- AI API 엔드포인트: (provider에 따라 다름)
+- models.dev: 모델 목록 조회
+
